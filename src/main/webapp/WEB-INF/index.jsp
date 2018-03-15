@@ -4,3 +4,5 @@
 <p>You can add books to virtual shelves, and view others' books as well!</p>
 <p>Eventually you will be able to create QR codes linking your real-world book shelves and storage to these virtual containers.</p>
 <p>Happy reading.</p>
+<a href="/shelves">View Shelves</a>
+<a href="/books">View Books</a>

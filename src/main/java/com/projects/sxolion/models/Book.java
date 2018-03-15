@@ -1,12 +1,18 @@
 package com.projects.sxolion.models;
 
+import javax.validation.constraints.Size;
+
 //https://www.googleapis.com/books/v1/volumes/ydQiDQAAQBAJ
 
 public class Book {
 	
+	@Size(min=1, max=50)
 	private String title;
+	@Size(min=3, max=50)
 	private String author;
+	@Size(min=5, max=500)
 	private String description;
+	@Size(min=10, max=13)
 	private String isbn;
 	
 	public Book() {
