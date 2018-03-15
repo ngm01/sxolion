@@ -1,0 +1,83 @@
+{
+ "kind": "books#volume",
+ "id": "ydQiDQAAQBAJ",
+ "etag": "ncTIzj2OsrU",
+ "selfLink": "https://www.googleapis.com/books/v1/volumes/ydQiDQAAQBAJ",
+ "volumeInfo": {
+  "title": "Dune",
+  "authors": [
+   "Frank Herbert"
+  ],
+  "publisher": "Penguin",
+  "publishedDate": "2016",
+  "description": "\u003cb\u003eA deluxe hardcover edition of the best-selling science-fiction book of all time--part of Penguin Galaxy, a collectible series of six sci-fi/fantasy classics, featuring a series introduction by Neil Gaiman\u003c/b\u003e\u003cbr\u003e \u003cb\u003e \u003cbr\u003e Winner of the AIGA + Design Observer 50 Books | 50 Covers competition\u003cbr\u003e\u003c/b\u003e\u003cbr\u003e Science fiction's supreme masterpiece, \u003ci\u003eDune \u003c/i\u003ewill be forever considered a triumph of the imagination. Set on the desert planet Arrakis, it is the story of the boy Paul Atreides, who will become the mysterious man known as Muad'Dib. Paul's noble family is named stewards of Arrakis, whose sands are the only source of a powerful drug called \"the spice.\" After his family is brought down in a traitorous plot, Paul must go undercover to seek revenge, and to bring to fruition humankind's most ancient and unattainable dream. A stunning blend of adventure and mysticism, environmentalism and politics, \u003ci\u003eDune\u003c/i\u003e won the first Nebula Award, shared the Hugo Award, and formed the basis of what is undoubtedly the grandest epic in science fiction.\u003cbr\u003e \u003cbr\u003e \u003cb\u003ePenguin Galaxy\u003c/b\u003e\u003cbr\u003e \u003cbr\u003e Six of our greatest masterworks of science fiction and fantasy, in dazzling collector-worthy hardcover editions, and featuring a series introduction by #1 \u003ci\u003eNew York Times\u003c/i\u003e bestselling author Neil Gaiman, Penguin Galaxy represents a constellation of achievement in visionary fiction, lighting the way toward our knowledge of the universe, and of ourselves. From historical legends to mythic futures, monuments of world-building to mind-bending dystopias, these touchstones of human invention and storytelling ingenuity have transported millions of readers to distant realms, and will continue for generations to chart the frontiers of the imagination.\u003cbr\u003e \u003cbr\u003e \u003ci\u003eThe Once and Future King\u003c/i\u003e by T. H. White\u003cbr\u003e \u003ci\u003eStranger in a Strange Land\u003c/i\u003e by Robert A. Heinlein\u003cbr\u003e \u003ci\u003eDune\u003c/i\u003e by Frank Herbert\u003cbr\u003e \u003ci\u003e2001: A Space Odyssey\u003c/i\u003e by Arthur C. Clarke\u003cbr\u003e \u003ci\u003eThe Left Hand of Darkness\u003c/i\u003e by Ursula K. Le Guin\u003cbr\u003e \u003ci\u003eNeuromancer\u003c/i\u003e by William Gibson\u003cbr\u003e \u003cbr\u003e For more than seventy years, Penguin has been the leading publisher of classic literature in the English-speaking world. With more than 1,700 titles, Penguin Classics represents a global bookshelf of the best works throughout history and across genres and disciplines. Readers trust the series to provide authoritative texts enhanced by introductions and notes by distinguished scholars and contemporary authors, as well as up-to-date translations by award-winning translators.",
+  "industryIdentifiers": [
+   {
+    "type": "ISBN_10",
+    "identifier": "0143111582"
+   },
+   {
+    "type": "ISBN_13",
+    "identifier": "9780143111580"
+   }
+  ],
+  "readingModes": {
+   "text": false,
+   "image": false
+  },
+  "pageCount": 694,
+  "printedPageCount": 722,
+  "dimensions": {
+   "height": "22.00 cm",
+   "width": "14.80 cm",
+   "thickness": "5.30 cm"
+  },
+  "printType": "BOOK",
+  "categories": [
+   "FICTION / Classics",
+   "Fiction / Literary",
+   "Fiction / Science Fiction / General"
+  ],
+  "averageRating": 4.0,
+  "ratingsCount": 3059,
+  "maturityRating": "NOT_MATURE",
+  "allowAnonLogging": false,
+  "contentVersion": "1.1.0.0.preview.0",
+  "panelizationSummary": {
+   "containsEpubBubbles": false,
+   "containsImageBubbles": false
+  },
+  "imageLinks": {
+   "smallThumbnail": "http://books.google.com/books/content?id=ydQiDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73uuMSjSYCpQpdbwy_5xbw3etiP2I5O9afQ0uBw1QMVwLWXXD9cbDWGI8IYjzK35s_Hagv6tfK0LNapMuil9-06luVExwGeGf_UaDE8aarOsMGXK2e_Ooyeko95uSmNuj-hnC1q&source=gbs_api",
+   "thumbnail": "http://books.google.com/books/content?id=ydQiDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73pWXkur0I7aP_TchOyYFpgBI5cxBdrZApn7np-BEvoW8czmyxV6cf-pxm3BQhYxCcbudEbJMrBBKAlJrl9uyjrKFg1I3_KKa9FoSf0d-n4JdmU_UHqX4J3Zz5p0Y7aRLqaohmC&source=gbs_api",
+   "small": "http://books.google.com/books/content?id=ydQiDQAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE73-y9fiAMtVpJ5TN-9sanSrctPPrnipf7LXirY8R6Xzoo2ZbKsjW3Zrga0LQpGHUioWqjXEnjO8XvzmVNijjBZPvmsK1I9a8xhef-LdW6jy9IWSrBaAC-1uQJR9P3hTu-nGMaSx&source=gbs_api",
+   "medium": "http://books.google.com/books/content?id=ydQiDQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE71YpTVSEjWpzPcr-PulPEC3pR7HuVu51UeDux-ksXBoqQSwGaBRq3VDMCAon1WnkwLylwvnDh0kfr4_GRV3CUhansQGuRZltHmCmXdRyK-Vh9v3TmFrzgZNrY5HOEry1LRf8X-v&source=gbs_api",
+   "large": "http://books.google.com/books/content?id=ydQiDQAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE72In6csWn5TBo3T3f190i2WLqi9thMyvQzmk1mtyqJw5nDuKtmshBuHVRNC1Gwo9DV5xEKPSJ_Qa9-OXEwTBm6eDFmDC5yl9ajNP1iVFvg22xpe9jZ9ylHAduAFwxwv5eNTfT-3&source=gbs_api"
+  },
+  "language": "en",
+  "previewLink": "http://books.google.com/books?id=ydQiDQAAQBAJ&hl=&source=gbs_api",
+  "infoLink": "https://play.google.com/store/books/details?id=ydQiDQAAQBAJ&source=gbs_api",
+  "canonicalVolumeLink": "https://market.android.com/details?id=book-ydQiDQAAQBAJ"
+ },
+ "saleInfo": {
+  "country": "US",
+  "saleability": "NOT_FOR_SALE",
+  "isEbook": false
+ },
+ "accessInfo": {
+  "country": "US",
+  "viewability": "PARTIAL",
+  "embeddable": true,
+  "publicDomain": false,
+  "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+  "epub": {
+   "isAvailable": false
+  },
+  "pdf": {
+   "isAvailable": false
+  },
+  "webReaderLink": "http://play.google.com/books/reader?id=ydQiDQAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+  "accessViewStatus": "SAMPLE",
+  "quoteSharingAllowed": false
+ }
+}

@@ -1,0 +1,894 @@
+{
+ "kind": "books#volumes",
+ "totalItems": 2579,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "ydQiDQAAQBAJ",
+   "etag": "zcVUlu21ttI",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/ydQiDQAAQBAJ",
+   "volumeInfo": {
+    "title": "Dune",
+    "authors": [
+     "Frank Herbert"
+    ],
+    "publisher": "Penguin",
+    "publishedDate": "2016-10-25",
+    "description": "A deluxe hardcover edition of the best-selling science-fiction book of all time--part of Penguin Galaxy, a collectible series of six sci-fi/fantasy classics, featuring a series introduction by Neil Gaiman Science fiction's supreme masterpiece, Dune will be forever considered a triumph of the imagination. Set on the desert planet Arrakis, it is the story of the boy Paul Atreides, who will become the mysterious man known as Muad'Dib. Paul's noble family is named stewards of Arrakis, whose sands are the only source of a powerful drug called \"the spice.\" After his family is brought down in a traitorous plot, Paul must go undercover to seek revenge, and to bring to fruition humankind's most ancient and unattainable dream. A stunning blend of adventure and mysticism, environmentalism and politics, Dune won the first Nebula Award, shared the Hugo Award, and formed the basis of what is undoubtedly the grandest epic in science fiction. Penguin Galaxy Six of our greatest masterworks of science fiction and fantasy, in dazzling collector-worthy hardcover editions, and featuring a series introduction by #1 New York Times bestselling author Neil Gaiman, Penguin Galaxy represents a constellation of achievement in visionary fiction, lighting the way toward our knowledge of the universe, and of ourselves. From historical legends to mythic futures, monuments of world-building to mind-bending dystopias, these touchstones of human invention and storytelling ingenuity have transported millions of readers to distant realms, and will continue for generations to chart the frontiers of the imagination. The Once and Future King by T. H. White Stranger in a Strange Land by Robert A. Heinlein Dune by Frank Herbert 2001: A Space Odyssey by Arthur C. Clarke The Left Hand of Darkness by Ursula K. Le Guin Neuromancer by William Gibson For more than seventy years, Penguin has been the leading publisher of classic literature in the English-speaking world. With more than 1,700 titles, Penguin Classics represents a global bookshelf of the best works throughout history and across genres and disciplines. Readers trust the series to provide authoritative texts enhanced by introductions and notes by distinguished scholars and contemporary authors, as well as up-to-date translations by award-winning translators.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780143111580"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0143111582"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 720,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 3059,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.0.0.preview.0",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=ydQiDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=ydQiDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=ydQiDQAAQBAJ&printsec=frontcover&dq=dune&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=ydQiDQAAQBAJ&dq=dune&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Dune.html?hl=&id=ydQiDQAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=ydQiDQAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "&quot;First published in the United States of America by Chilton Books 1965&quot;--Title page verso."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "TfclAAAACAAJ",
+   "etag": "9FJNwTNbWMY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/TfclAAAACAAJ",
+   "volumeInfo": {
+    "title": "The Illustrated Dune",
+    "authors": [
+     "Frank Herbert"
+    ],
+    "publisher": "Berkley Publishing Group",
+    "publishedDate": "1978-08-01",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0425038912"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780425038918"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 533,
+    "printType": "BOOK",
+    "categories": [
+     "Dune (Imaginary place)"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=TfclAAAACAAJ&dq=dune&hl=&cd=2&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=TfclAAAACAAJ&dq=dune&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/The_Illustrated_Dune.html?hl=&id=TfclAAAACAAJ"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=TfclAAAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "He created the illustrations for the original magazine serials of Herbert&#39;s DUNE trilogy, as well as the illustrations for the original hardcover and paperback editions of the work."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "RxxwnkPHlfEC",
+   "etag": "3D1GdzCm6KE",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/RxxwnkPHlfEC",
+   "volumeInfo": {
+    "title": "Children of Dune",
+    "authors": [
+     "Frank Herbert"
+    ],
+    "publisher": "Penguin",
+    "publishedDate": "2008-06-03",
+    "description": "Book Three in the Magnificent Dune Chronicles—the Bestselling Science Fiction Adventure of All Time Nine years ago Emperor Paul Muad'Dib disappeared into the desert wastelands of Arrakis. Now, his twin children—Leto and Ghanima Atreides—are being groomed to become Messiahs. Like their father, the twins possess supernormal abilities, making them valuable to their manipulative aunt Alia, who rules the Empire in the name of House Atreides. Facing treason and rebellion on two fronts, Alia’s rule is not absolute. The displaced House Corrino is plotting to regain the throne while the fanatical Fremens are being provoked into open revolt by the enigmatic figure known only as The Preacher. By obtaining the secrets of the twins’ prophetic visions, Alia believes she can maintain control over her dynasty. But Leto and Ghanima have their own plans for their visions—and their destiny...",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1440630518"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781440630514"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 416,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 3.5,
+    "ratingsCount": 30,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.42.45.0.preview.2",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=RxxwnkPHlfEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=RxxwnkPHlfEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=RxxwnkPHlfEC&printsec=frontcover&dq=dune&hl=&cd=3&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=RxxwnkPHlfEC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-RxxwnkPHlfEC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 9.99,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 9.99,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=RxxwnkPHlfEC&rdid=book-RxxwnkPHlfEC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 9990000.0,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 9990000.0,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/Children_of_Dune-sample-epub.acsm?id=RxxwnkPHlfEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=RxxwnkPHlfEC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Book Three in the Magnificent Dune Chronicles—the Bestselling Science Fiction Adventure of All Time Nine years ago Emperor Paul Muad&#39;Dib disappeared into the desert wastelands of Arrakis."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "4kbYExSCa6oC",
+   "etag": "MZeSYw1DpvQ",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/4kbYExSCa6oC",
+   "volumeInfo": {
+    "title": "The Science of Dune",
+    "subtitle": "An Unauthorized Exploration into the Real Science Behind Frank Herbert's Fictional Universe",
+    "authors": [
+     "Kevin Grazier"
+    ],
+    "publisher": "BenBella Books, Inc.",
+    "publishedDate": "2009-06-22",
+    "description": "In this analysis of the bestselling science fiction adventure of all time, authors explore all aspects of Dune, including the fascinating scientific speculations ranging from physics and chemistry to ecology and evolution, from human psychology and mental potential to technology and genetics. Authors and experts examine what Herbert gets right and what he gets wrong, how lasguns might work and if Bene Gesserit and mentat capabilities are possible. The book also takes a look at whether the ecology of Dune is realistic or if it’s theoretically possible to get information from the future. Could humans really evolve as Herbert suggests? How can one build a windtrap or a stillsuit?",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781935251408"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1935251406"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 232,
+    "printType": "BOOK",
+    "categories": [
+     "Science"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.3.3.0.preview.3",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=4kbYExSCa6oC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=4kbYExSCa6oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=4kbYExSCa6oC&printsec=frontcover&dq=dune&hl=&cd=4&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=4kbYExSCa6oC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-4kbYExSCa6oC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 17.95,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 9.99,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=4kbYExSCa6oC&rdid=book-4kbYExSCa6oC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.795E7,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 9990000.0,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/The_Science_of_Dune-sample-epub.acsm?id=4kbYExSCa6oC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/The_Science_of_Dune-sample-pdf.acsm?id=4kbYExSCa6oC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=4kbYExSCa6oC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "The book also takes a look at whether the ecology of Dune is realistic or if it’s theoretically possible to get information from the future. Could humans really evolve as Herbert suggests? How can one build a windtrap or a stillsuit?"
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "fGF1z33F-t4C",
+   "etag": "N7Q2Ttl7BWg",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/fGF1z33F-t4C",
+   "volumeInfo": {
+    "title": "Sisterhood of Dune",
+    "authors": [
+     "Brian Herbert",
+     "Kevin J. Anderson"
+    ],
+    "publisher": "Tor Books",
+    "publishedDate": "2012-01-03",
+    "description": "It is eighty-three years after the last of the thinking machines were destroyed in the Battle of Corrin, after Faykan Butler took the name of Corrino and established himself as the first Emperor of a new Imperium. Great changes are brewing that will shape and twist all of humankind. The war hero Vorian Atreides has turned his back on politics and Salusa Secundus. The descendants of Abulurd Harkonnen Griffen and Valya have sworn vengeance against Vor, blaming him for the downfall of their fortunes. Raquella Berto-Anirul has formed the Bene Gesserit School on the jungle planet Rossak as the first Reverend Mother. The descendants of Aurelius Venport and Norma Cenva have built Venport Holdings, using mutated, spice-saturated Navigators who fly precursors of Heighliners. Gilbertus Albans, the ward of the hated Erasmus, is teaching humans to become Mentats...and hiding an unbelievable secret. The Butlerian movement, rabidly opposed to all forms of \"dangerous technology,\" is led by Manford Torondo and his devoted Swordmaster, Anari Idaho. And it is this group, so many decades after the defeat of the thinking machines, which begins to sweep across the known universe in mobs, millions strong, destroying everything in its path. Every one of these characters, and all of these groups, will become enmeshed in the contest between Reason and Faith. All of them will be forced to choose sides in the inevitable crusade that could destroy humankind forever.... At the Publisher's request, this title is being sold without Digital Rights Management Software (DRM) applied.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781429986571"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1429986573"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 496,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 3.0,
+    "ratingsCount": 8,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "3.5.6.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=fGF1z33F-t4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=fGF1z33F-t4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=fGF1z33F-t4C&printsec=frontcover&dq=dune&hl=&cd=5&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=fGF1z33F-t4C&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-fGF1z33F-t4C"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 9.99,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 9.99,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=fGF1z33F-t4C&rdid=book-fGF1z33F-t4C&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 9990000.0,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 9990000.0,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=fGF1z33F-t4C&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "It is eighty-three years after the last of the thinking machines were destroyed in the Battle of Corrin, after Faykan Butler took the name of Corrino and established himself as the first Emperor of a new Imperium."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "D12dCwAAQBAJ",
+   "etag": "V4In/+2cT+w",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/D12dCwAAQBAJ",
+   "volumeInfo": {
+    "title": "Navigators of Dune",
+    "authors": [
+     "Brian Herbert",
+     "Kevin J. Anderson"
+    ],
+    "publisher": "Tor Books",
+    "publishedDate": "2016-09-13",
+    "description": "Brian Herbert and Kevin J. Anderson's Navigators of Dune is the climactic finale of the Great Schools of Dune trilogy, set 10,000 years before Frank Herbert's classic Dune. The story line tells the origins of the Bene Gesserit Sisterhood and its breeding program, the human-computer Mentats, and the Navigators (the Spacing Guild), as well as a crucial battle for the future of the human race, in which reason faces off against fanaticism. These events have far-reaching consequences that will set the stage for Dune, millennia later. At the Publisher's request, this title is being sold without Digital Rights Management Software (DRM) applied.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781466878808"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1466878800"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 448,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.2.2.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=D12dCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=D12dCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=D12dCwAAQBAJ&pg=PP1&dq=dune&hl=&cd=6&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=D12dCwAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-D12dCwAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 9.99,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 9.99,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=D12dCwAAQBAJ&rdid=book-D12dCwAAQBAJ&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 9990000.0,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 9990000.0,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=D12dCwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "The story line tells the origins of the Bene Gesserit Sisterhood and its breeding program, the human-computer Mentats, and the Navigators (the Spacing Guild), as well as a crucial battle for the future of the human race, in which reason ..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "RHLQWg98NyoC",
+   "etag": "2CFMfQxoxQ4",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/RHLQWg98NyoC",
+   "volumeInfo": {
+    "title": "Heretics of Dune",
+    "authors": [
+     "Frank Herbert"
+    ],
+    "publisher": "Penguin",
+    "publishedDate": "1987-08-15",
+    "description": "Book Five in the Magnificent Dune Chronicles—the Bestselling Science Fiction Adventure of All Time Leto Atreides, the God Emperor of Dune, is dead. In the fifteen hundred years since his passing, the Empire has fallen into ruin. The great Scattering saw millions abandon the crumbling civilization and spread out beyond the reaches of known space. The planet Arrakis—now called Rakis—has reverted to its desert climate, and its great sandworms are dying. Now, the Lost Ones are returning home in pursuit of power. And as these factions vie for control over the remnants of the Empire, a girl named Sheeana rises to prominence in wastelands of Rakis, sending religious fervor throughout the galaxy. For she possesses the abilities of the Fremen sandriders—fulfilling a prophecy foretold by the late God Emperor...",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1440619646"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781440619649"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 480,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 3.5,
+    "ratingsCount": 19,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.6.9.0.preview.2",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=RHLQWg98NyoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=RHLQWg98NyoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=RHLQWg98NyoC&printsec=frontcover&dq=dune&hl=&cd=7&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=RHLQWg98NyoC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-RHLQWg98NyoC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 9.99,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 9.99,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=RHLQWg98NyoC&rdid=book-RHLQWg98NyoC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 9990000.0,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 9990000.0,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/Heretics_of_Dune-sample-epub.acsm?id=RHLQWg98NyoC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=RHLQWg98NyoC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Book Five in the Magnificent Dune Chronicles—the Bestselling Science Fiction Adventure of All Time Leto Atreides, the God Emperor of Dune, is dead."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "hkYnTJ6KWpcC",
+   "etag": "D2qs8tx+3Oc",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/hkYnTJ6KWpcC",
+   "volumeInfo": {
+    "title": "Dune: The Machine Crusade",
+    "authors": [
+     "Brian Herbert",
+     "Kevin J. Anderson",
+     "Frank Herbert"
+    ],
+    "publisher": "Macmillan",
+    "publishedDate": "2003-09-16",
+    "description": "As the struggle against the thinking robots continues, Serena Butler's forces continue their battle, the Cymeks scheme to regain their lost power from Omnius, Aurelius Venport and Norma Cenva are on the verge of a seminal scientific discovery, and Selim Wormrider and his Fremen outlaws take the first step into becoming the fighters who would change history. 250,000 first printing.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780765301581"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "076530158X"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 701,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=hkYnTJ6KWpcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=hkYnTJ6KWpcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=hkYnTJ6KWpcC&printsec=frontcover&dq=dune&hl=&cd=8&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=hkYnTJ6KWpcC&dq=dune&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Dune_The_Machine_Crusade.html?hl=&id=hkYnTJ6KWpcC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=hkYnTJ6KWpcC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Praise for &quot;Dune: The Butlerian Jihad &quot;&quot;The kind of intricate plotting and philosophical musings that would make the elder Herbert proud.Throughout, key revelations regarding the Zensunni Wanderers and their fight for freedom and other ..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "uezTr4wdpW4C",
+   "etag": "g5f3/lAxUqs",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/uezTr4wdpW4C",
+   "volumeInfo": {
+    "title": "Paul of Dune",
+    "authors": [
+     "Brian Herbert",
+     "Kevin J. Anderson"
+    ],
+    "publisher": "Tor Books",
+    "publishedDate": "2008-09-16",
+    "description": "Frank Herbert's Dune ended with Paul Muad'Dib in control of the planet Dune. Herbert's next Dune book, Dune Messiah, picked up the story several years later after Paul's armies had conquered the galaxy. But what happened between Dune and Dune Messiah? How did Paul create his empire and become the Messiah? Following in the footsteps of Frank Herbert, New York Times bestselling authors Brian Herbert and Kevin J. Anderson are answering these questions in Paul of Dune. The Muad'Dib's jihad is in full swing. His warrior legions march from victory to victory. But beneath the joy of victory there are dangerous undercurrents. Paul, like nearly every great conqueror, has enemies--those who would betray him to steal the awesome power he commands. . . . And Paul himself begins to have doubts: Is the jihad getting out of his control? Has he created anarchy? Has he been betrayed by those he loves and trusts the most? And most of all, he wonders: Am I going mad? Paul of Dune is a novel everyone will want to read and no one will be able to forget. At the Publisher's request, this title is being sold without Digital Rights Management Software (DRM) applied.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1429954728"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781429954723"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 512,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 3.5,
+    "ratingsCount": 9,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.5.5.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=uezTr4wdpW4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=uezTr4wdpW4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=uezTr4wdpW4C&printsec=frontcover&dq=dune&hl=&cd=9&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=uezTr4wdpW4C&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-uezTr4wdpW4C"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 9.99,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 9.99,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=uezTr4wdpW4C&rdid=book-uezTr4wdpW4C&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 9990000.0,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 9990000.0,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=uezTr4wdpW4C&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Frank Herbert&#39;s Dune ended with Paul Muad&#39;Dib in control of the planet Dune. Herbert&#39;s next Dune book, Dune Messiah, picked up the story several years later after Paul&#39;s armies had conquered the galaxy."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "f8gTJ3-MWzEC",
+   "etag": "EGA7z4CDwXk",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/f8gTJ3-MWzEC",
+   "volumeInfo": {
+    "title": "Dune: The Butlerian Jihad",
+    "subtitle": "Book One of the Legends of Dune Trilogy",
+    "authors": [
+     "Brian Herbert",
+     "Kevin J. Anderson"
+    ],
+    "publisher": "Macmillan",
+    "publishedDate": "2010-04-01",
+    "description": "Frank Herbert's Dune series is one of the grandest epics in the annals of imaginative literature. Selling millions of copies worldwide, it is science fiction's answer to The Lord of the Rings, a brilliantly imaginative epic of high adventure, unforgettable characters, and immense scope. Decades after Herbert's original novels, the Dune saga was continued by Frank Herbert's son, Brian Herbert, an acclaimed SF novelist in his own right, in collaboration with Kevin J. Anderson. Their New York Times bestselling trilogy, Dune: House Atreides, Dune: House Harkonnen, and Dune: House Corrino, formed a prequel to the classic Herbert series that was acclaimed by reviewers and readers alike. Now Herbert and Anderson, working from Frank Herbert's own notes, reveal a pivotal epoch in the history of the Dune universe, the chapter of the saga most eagerly anticipated by readers: The Butlerian Jihad. Throughout the Dune novels, Frank Herbert frequently referred to the long-ago war in which humans wrested their freedom from \"thinking machines.\" Now, in Dune: Butlerian Jihad, Brian Herbert and Kevin J. Anderson bring to life the story of that war, a tale previously seen only in tantalizing hints and clues. Finally, we see how Serena Butler's passionate grief ignites the war that will liberate humans from their machine masters. We learn the circumstances of the betrayal that made mortal enemies of House Atreides and House Harkonnen; and we experience the Battle of Corrin that created a galactic empire that lasted until the reign of Emperor Shaddam IV. Herein are the foundations of the Bene Gesserit Sisterhood, the Suk Doctors, the Order of Mentats, and the mysteriously altered Navigators of the Spacing Guild. Here is the amazing tale of the Zensunni Wanderers, who escape bondage to flee to the desert world where they will declare themselves the Free Men of Dune. And here is the backward, nearly forgotten planet of Arrakis, where traders have discovered the remarkable properties of the spice melange . . . . Ten thousand years before the events of Dune, humans have managed to battle the remorseless Machines to a standstill . . . but victory may be short-lived. Yet amid shortsighted squabbling between nobles, new leaders have begun to emerge. Among them are Xavier Harkonnen, military leader of the Planet of Salusa Secundus; Xavier's fiancée, Serena Butler, an activist who will become the unwilling leader of millions; and Tio Holtzman, the scientist struggling to devise a weapon that will help the human cause. Against the brute efficiency of their adversaries, these leaders and the human race have only imagination, compassion, and the capacity for love. It will have to be enough. At the Publisher's request, this title is being sold without Digital Rights Management Software (DRM) applied.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1429955902"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781429955904"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 624,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 2.0,
+    "ratingsCount": 57,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "5.16.12.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=f8gTJ3-MWzEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=f8gTJ3-MWzEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=f8gTJ3-MWzEC&printsec=frontcover&dq=dune&hl=&cd=10&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=f8gTJ3-MWzEC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-f8gTJ3-MWzEC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 9.99,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 9.99,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=f8gTJ3-MWzEC&rdid=book-f8gTJ3-MWzEC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 9990000.0,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 9990000.0,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=f8gTJ3-MWzEC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Fans who will be sorry to see the end of this series will be heartened by the hint that the Dune saga is far from over.&quot;—Publishers Weekly on Dune: House Corrino"
+   }
+  }
+ ]
+}

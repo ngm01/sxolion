@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.projects.sxolion.models.Book;
+import com.projects.sxolion.models.DummyBook;
 import com.projects.sxolion.services.BookService;
 
 @Controller
@@ -30,14 +30,14 @@ public class BooksController {
 	
 	@RequestMapping("/books")
 	public String allBooks(Model model) {
-		List<Book> books = bookService.allBooks();
+		List<DummyBook> books = bookService.allBooks();
 		model.addAttribute("books", books);
 		return "books.jsp";
 	}
 	
 	@RequestMapping("/books{index}")
 	public String singleBook(Model model, @PathVariable("index") int index) {
-		Book book = bookService.findBookByIndex(index);
+		DummyBook book = bookService.findBookByIndex(index);
 		if(book != null) {
 			model.addAttribute("book", book);
 			return "singleBook.jsp";
@@ -48,12 +48,12 @@ public class BooksController {
 	}
 	
 	@RequestMapping("/books/new")
-	public String newBook(@ModelAttribute("book") Book book) {
+	public String newBook(@ModelAttribute("book") DummyBook book) {
 		return "newBook.jsp";
 	}
 	
 	@PostMapping("/books/new")
-	public String addBook(@Valid @ModelAttribute("book") Book book, BindingResult result) {
+	public String addBook(@Valid @ModelAttribute("book") DummyBook book, BindingResult result) {
 		if(result.hasErrors()) {
 			return "newBook.jsp";
 		}
@@ -65,7 +65,7 @@ public class BooksController {
 	
 	@RequestMapping("books/edit/{id}")
 	public String editBook(@PathVariable("id") int id, Model model) {
-		Book book = bookService.findBookByIndex(id);
+		DummyBook book = bookService.findBookByIndex(id);
 		if(book != null) {
 			model.addAttribute("book", book);
 			return "editBook.jsp";
@@ -76,7 +76,7 @@ public class BooksController {
 	}
 	
 	@PostMapping("books/edit/{id}")
-	public String updateBook(@PathVariable("id") int id, @Valid @ModelAttribute("book") Book book, BindingResult result) {
+	public String updateBook(@PathVariable("id") int id, @Valid @ModelAttribute("book") DummyBook book, BindingResult result) {
 		if(result.hasErrors()) {
 			return "editBook.jsp";
 		}
