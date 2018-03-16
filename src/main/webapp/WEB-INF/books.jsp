@@ -11,4 +11,5 @@
     </tr>
 </c:forEach>
 </table>
+<c:out value="${searchResults.items[0].volumeInfo.authors[0]}"/>
 <!-- ... -->

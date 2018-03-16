@@ -13,6 +13,12 @@ public class GoogleBooksAPIResponse {
 	
 	public GoogleBooksAPIResponse() {
 	}
+	
+	public GoogleBooksAPIResponse(String kind, long totalItems, List<BookItem> items) {
+		this.kind = kind;
+		this.totalItems = totalItems;
+		this.items = items;
+	}
 
 	public String getKind() {
 		return kind;
@@ -37,12 +43,4 @@ public class GoogleBooksAPIResponse {
 	public void setItems(List<BookItem> items) {
 		this.items = items;
 	}
-
-	public GoogleBooksAPIResponse(String kind, long totalItems, List<BookItem> items) {
-		super();
-		this.kind = kind;
-		this.totalItems = totalItems;
-		this.items = items;
-	}
-
 }

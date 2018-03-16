@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.client.RestTemplate;
 
 import com.projects.sxolion.models.DummyBook;
+import com.projects.sxolion.models.GoogleBooksAPIResponse;
 import com.projects.sxolion.services.BookService;
 
 @Controller
@@ -31,7 +33,10 @@ public class BooksController {
 	@RequestMapping("/books")
 	public String allBooks(Model model) {
 		List<DummyBook> books = bookService.allBooks();
+		RestTemplate restTemplate = new RestTemplate();
+		GoogleBooksAPIResponse searchResults = restTemplate.getForObject("https://www.googleapis.com/books/v1/volumes?q=middlemarch", GoogleBooksAPIResponse.class);
 		model.addAttribute("books", books);
+		model.addAttribute("searchResults", searchResults);
 		return "books.jsp";
 	}
 	
