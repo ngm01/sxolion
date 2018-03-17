@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
 import com.projects.sxolion.models.DummyBook;
@@ -21,6 +22,7 @@ import com.projects.sxolion.services.BookService;
 public class BooksController {
 
 	private final BookService bookService;
+	private GoogleBooksAPIResponse searchResults;
 	public BooksController(BookService bookService) {
 		this.bookService = bookService;
 	}
@@ -30,14 +32,27 @@ public class BooksController {
 		return "index.jsp";
 	}
 	
+	// @ModelAttribute("searchResults") GoogleBooksAPIResponse searchResults
 	@RequestMapping("/books")
 	public String allBooks(Model model) {
 		List<DummyBook> books = bookService.allBooks();
-		RestTemplate restTemplate = new RestTemplate();
-		GoogleBooksAPIResponse searchResults = restTemplate.getForObject("https://www.googleapis.com/books/v1/volumes?q=middlemarch", GoogleBooksAPIResponse.class);
+		if(this.searchResults==null) {
+			model.addAttribute("searchResults", null);
+		}
+		else {
+			model.addAttribute("searchResults", this.searchResults);
+		}
 		model.addAttribute("books", books);
-		model.addAttribute("searchResults", searchResults);
 		return "books.jsp";
+	}
+	
+	@RequestMapping("/books/search")
+	public String searchBooks(Model model, @RequestParam(name="query") String query) {
+		RestTemplate restTemplate = new RestTemplate();
+		GoogleBooksAPIResponse searchResults = restTemplate.getForObject("https://www.googleapis.com/books/v1/volumes?q="+query, GoogleBooksAPIResponse.class);
+		System.out.println("Search results total items: " + searchResults.getTotalItems());
+		this.searchResults = searchResults;
+		return "redirect:/books";
 	}
 	
 	@RequestMapping("/books{index}")
