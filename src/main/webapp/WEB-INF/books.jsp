@@ -19,6 +19,8 @@
 		</div>
 	</c:when>
 	<c:otherwise>
+		<form:form method="POST" action="/books/add" modelAttribute="bookList">
+		<input type="submit" value="Add Books"/>
 		<c:forEach items="${searchResults.items }" var="item">
 			<div class="search-results-book">
 				<h3><c:out value="${item.volumeInfo.title}"/></h3>
@@ -33,13 +35,14 @@
 						<p><c:out value="${item.volumeInfo.publishedDate}"/></p>
 						<p><c:out value="${fn:substring(item.volumeInfo.description, 0, 100)}"/>...</p>
 						<p>
-							<a href="${item.volumeInfo.previewLink}" target="_blank">Google Books Preview</a>
+							<a href="${item.volumeInfo.previewLink}" target="_blank">preview</a>
 						</p>
+						<input type="checkbox" name="book" value="${item.volumeInfo}"/>
 					</div>
 				</div>
 			</div>
-
 		</c:forEach>
+		</form:form>
 	</c:otherwise>
 </c:choose>
 <!-- ... -->

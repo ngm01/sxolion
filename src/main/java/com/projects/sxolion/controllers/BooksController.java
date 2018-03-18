@@ -16,6 +16,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.projects.sxolion.models.DummyBook;
 import com.projects.sxolion.models.GoogleBooksAPIResponse;
+import com.projects.sxolion.models.VolumeInfo;
 import com.projects.sxolion.services.BookService;
 
 @Controller
@@ -50,9 +51,13 @@ public class BooksController {
 	public String searchBooks(Model model, @RequestParam(name="query") String query) {
 		RestTemplate restTemplate = new RestTemplate();
 		GoogleBooksAPIResponse searchResults = restTemplate.getForObject("https://www.googleapis.com/books/v1/volumes?q="+query, GoogleBooksAPIResponse.class);
-		System.out.println("Search results total items: " + searchResults.getTotalItems());
 		this.searchResults = searchResults;
 		return "redirect:/books";
+	}
+	
+	@PostMapping("/books/add")
+	public String addBooks(@ModelAttribute("bookList") List<VolumeInfo> bookList) {
+		return "whatever";
 	}
 	
 	@RequestMapping("/books{index}")
