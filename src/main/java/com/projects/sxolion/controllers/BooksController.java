@@ -49,20 +49,30 @@ public class BooksController {
 	}
 	
 	@RequestMapping("/books/search")
-	public String searchBooks(Model model, @RequestParam(name="query") String query) {
-		RestTemplate restTemplate = new RestTemplate();
-		GoogleBooksAPIResponse searchResults = restTemplate.getForObject("https://www.googleapis.com/books/v1/volumes?q="+query, GoogleBooksAPIResponse.class);
-		this.searchResults = searchResults;
-		return "redirect:/books";
+	public String searchBooks(Model model, @RequestParam(name="query", defaultValue="") String query) {
+		if(query.isEmpty()) {
+			return "redirect:/books";
+		}
+		else {
+			RestTemplate restTemplate = new RestTemplate();
+			GoogleBooksAPIResponse searchResults = restTemplate.getForObject("https://www.googleapis.com/books/v1/volumes?q="+query, GoogleBooksAPIResponse.class);
+			this.searchResults = searchResults;
+			return "redirect:/books";
+		}
 	}
 	
 	@PostMapping("/books/add")
 	public String addBooks(HttpServletRequest request) {
-		String[] selectedBooks = request.getParameterValues("selectedBooks");
-		GoogleBooksAPIResponseService gBARS = new GoogleBooksAPIResponseService();
-		List<Book> updatedBookList = gBARS.createBooks(searchResults, selectedBooks);
-		bookService.addBooks(updatedBookList);
-		return "redirect:/books";
+		if(request.getParameterValues("selectedBooks")==null) {
+			return "redirect:/books";
+		}
+		else {
+			String[] selectedBooks = request.getParameterValues("selectedBooks");
+			GoogleBooksAPIResponseService gBARS = new GoogleBooksAPIResponseService();
+			List<Book> updatedBookList = gBARS.createBooks(searchResults, selectedBooks);
+			bookService.addBooks(updatedBookList);
+			return "redirect:/books";
+		}
 	}
 	
 //	@RequestMapping("/books{index}")
