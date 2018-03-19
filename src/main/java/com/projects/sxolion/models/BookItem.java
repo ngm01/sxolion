@@ -8,12 +8,12 @@ public class BookItem {
 	private String kind;
 	private String id;
 	private String selfLink;
-	private VolumeInfo volumeInfo;
+	private Book volumeInfo;
 	
 	public BookItem() {
 	}
 
-	public BookItem(String kind, String id, String selfLink, VolumeInfo volumeInfo) {
+	public BookItem(String kind, String id, String selfLink, Book volumeInfo) {
 		this.kind = kind;
 		this.id = id;
 		this.selfLink = selfLink;
@@ -44,11 +44,11 @@ public class BookItem {
 		this.selfLink = selfLink;
 	}
 
-	public VolumeInfo getVolumeInfo() {
+	public Book getVolumeInfo() {
 		return volumeInfo;
 	}
 
-	public void setVolumeInfo(VolumeInfo volumeInfo) {
+	public void setVolumeInfo(Book volumeInfo) {
 		this.volumeInfo = volumeInfo;
 	}
 	

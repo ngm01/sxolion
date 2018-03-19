@@ -2,6 +2,14 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!-- ... -->
+<div>
+	<ul>
+	<c:forEach items="${books}" var="book">
+		<li>"${book.title}"</li>
+	</c:forEach>
+	</ul>
+</div>
+
 <form method="GET" action="/books/search">
 	<label for="query">Search for books:</label>
 	<input type="text" name="query"/>
@@ -19,9 +27,9 @@
 		</div>
 	</c:when>
 	<c:otherwise>
-		<form:form method="POST" action="/books/add" modelAttribute="bookList">
+		<form:form method="POST" action="/books/add">
 		<input type="submit" value="Add Books"/>
-		<c:forEach items="${searchResults.items }" var="item">
+		<c:forEach items="${searchResults.items }" var="item" varStatus="bookLoop">
 			<div class="search-results-book">
 				<h3><c:out value="${item.volumeInfo.title}"/></h3>
 				<div class="search-results-book-body">
@@ -29,15 +37,15 @@
 					<div class="search-results-book-body-text">
 						<p>
 							<c:forEach items="${item.volumeInfo.authors}" var="author" varStatus="loop">
-							<c:out value="${author}"/><c:if test="${loop.index lt fn:length(item.volumeInfo.authors)-1}">,</c:if>
-						</c:forEach>
+								<c:out value="${author}"/><c:if test="${loop.index lt fn:length(item.volumeInfo.authors)-1}">,</c:if>
+							</c:forEach>
 						</p>
 						<p><c:out value="${item.volumeInfo.publishedDate}"/></p>
 						<p><c:out value="${fn:substring(item.volumeInfo.description, 0, 100)}"/>...</p>
 						<p>
 							<a href="${item.volumeInfo.previewLink}" target="_blank">preview</a>
 						</p>
-						<input type="checkbox" name="book" value="${item.volumeInfo}"/>
+						<input type="checkbox" name="selectedBooks" value="${bookLoop.index}"/>
 					</div>
 				</div>
 			</div>

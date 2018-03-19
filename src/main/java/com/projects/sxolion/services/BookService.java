@@ -1,48 +1,32 @@
 package com.projects.sxolion.services;
 
-import java.util.List;
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.projects.sxolion.models.DummyBook;
+import com.projects.sxolion.models.Book;
 
 @Service
 public class BookService {
 	
-	private List<DummyBook> books = new ArrayList<DummyBook>(Arrays.asList(
-			new DummyBook("Head First Java", "Kathy Sierra", "Learning a complex new language", "9781449331443"),
-			new DummyBook("The Landmark Thucydides", "Thucydides", "Chronicles two decades of war between Athens and Sparta", "9781416590873"),
-			new DummyBook("Dune", "Frank Herbert", "Set on the desert planet Arrakis", "9780143111580")
-			));
+	private List<Book> masterBookList = new ArrayList<Book>(Arrays.asList(new Book("My book")));
+	
+	public void addBooks(List<Book> bookList) {
+		for(Book book: bookList) {
+			masterBookList.add(book);
+		}
+		for(Book book: bookList) {
+			System.out.println("addBooks method: " + book.getTitle());
+		}
+	}
+	
+	public List<Book> allBooks(){
+		for(Book book: masterBookList) {
+			System.out.println("allBooks method: " + book.getTitle());
+		}
+		return this.masterBookList;
+	}
 
-	public List<DummyBook> allBooks(){
-		return books;
-	}
-	
-	public DummyBook findBookByIndex(int idx) {
-		if(idx < books.size()) {
-			return books.get(idx);
-		}
-		else {
-			return null;
-		}
-	}
-	
-	public void addBook(DummyBook book) {
-		books.add(book);
-	}
-	
-	public void updateBook(int id, DummyBook book) {
-		if(id < books.size()){
-			books.set(id, book);
-		}
-	}
-	
-	public void deleteBook(int id) {
-		if(id < books.size()) {
-			books.remove(id);
-		}
-	}
 }
