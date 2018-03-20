@@ -1,6 +1,5 @@
 package com.projects.sxolion.models;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -162,22 +161,37 @@ public class VolumeInfo {
 		this.canonicalVolumeLink = canonicalVolumeLink;
 	}
 	
-	public List<String> convertImageLinks(){
-		List<String> convertedImageLinks = new ArrayList<String>();
-		convertedImageLinks.add(this.imageLinks.smallThumbnail);
-		convertedImageLinks.add(this.imageLinks.thumbnail);
-		return convertedImageLinks;
+	public String getSmallThumbnail(){
+		return this.imageLinks.smallThumbnail;
 	}
 	
-	public List<String []> convertIndustryIdentifiers(){
-		List<String []> convertedIndustryIDs = new ArrayList<String []>();
+	public String getISBN13(){
+		String ISBN13 = "978";
 		for(IndustryIdentifier industryIDer: this.industryIdentifiers) {
-			String[] IDer = new String [2];
-			IDer[0] = industryIDer.getType();
-			IDer[1] = industryIDer.getIdentifier();
-			convertedIndustryIDs.add(IDer);
+			if(industryIDer.getType() == "ISBN_13") {
+				ISBN13 = industryIDer.getIdentifier();
+			}
 		}
-		return convertedIndustryIDs;
+		return ISBN13;
+	}
+	
+	public String getAuthorsAsString() {
+		return stringifyListHelper(this.authors);
+	}
+	
+	public String getCategoriesAsString() {
+		return stringifyListHelper(this.categories);
+	}
+	
+	public String stringifyListHelper(List<String> inputList) {
+		String outputStr = "";
+		for(int i=0;i<inputList.size();i++) {
+			outputStr += inputList.get(i);
+			if(i<inputList.size()-1) {
+				outputStr += " , ";
+			}
+		}
+		return outputStr;
 	}
 
 }

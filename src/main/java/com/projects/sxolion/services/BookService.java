@@ -16,15 +16,12 @@ public class BookService {
 	public void addBooks(List<VolumeInfo> volumeInfoList) {
 		for(VolumeInfo volumeInfo: volumeInfoList) {
 			Book book = new Book();
-			book.setAuthors(volumeInfo.getAuthors());
+			book.setAuthors(volumeInfo.getAuthorsAsString());
 			book.setCanonicalVolumeLink(volumeInfo.getCanonicalVolumeLink());
-			book.setCategories(volumeInfo.getCategories());
-			book.setDescription(volumeInfo.getDescription());
-			
-			//These two need special helper methods:
-			book.setImageLinks(volumeInfo.convertImageLinks());
-			book.setIndustryIdentifiers(volumeInfo.convertIndustryIdentifiers());
-			
+			book.setCategories(volumeInfo.getCategoriesAsString());
+			book.setDescription(volumeInfo.getDescription());		
+			book.setSmallThumbnail(volumeInfo.getSmallThumbnail());
+			book.setISBN13(volumeInfo.getISBN13());
 			book.setInfoLink(volumeInfo.getInfoLink());
 			book.setLanguage(volumeInfo.getLanguage());
 			book.setPageCount(volumeInfo.getPageCount());

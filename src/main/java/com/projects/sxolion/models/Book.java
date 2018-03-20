@@ -1,16 +1,17 @@
 package com.projects.sxolion.models;
 
-import java.util.List;
+
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.format.annotation.DateTimeFormat;
+
 
 @Entity
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Book {
 	
 	@Id
@@ -20,7 +21,7 @@ public class Book {
 	@Column
 	private String title;
 	@Column
-	private List<String> authors;
+	private String authors;
 	@Column
 	private String publisher;
 	@Column
@@ -28,15 +29,15 @@ public class Book {
 	@Column
 	private String description;
 	@Column
-	private List<String []> industryIdentifiers;
+	private String ISBN13;
 	@Column
 	private long pageCount;
 	@Column
 	private String printType;
 	@Column
-	private List<String> categories;
+	private String categories;
 	@Column
-	private List<String> imageLinks;
+	private String smallThumbnail;
 	@Column
 	private String language;
 	@Column
@@ -46,6 +47,13 @@ public class Book {
 	@Column
 	private String canonicalVolumeLink;
 	
+	@Column(updatable=false)
+	@DateTimeFormat(pattern="MM/dd/yyy HH:mm:ss")
+	private Date createdAt;
+	
+	@DateTimeFormat(pattern="MM/dd/yyy HH:mm:ss")
+	private Date updatedAt;
+	
 	public Book() {
 	}
 	
@@ -53,19 +61,19 @@ public class Book {
 		this.title = title;
 	}
 	
-	public Book(String title, List<String> authors, String publisher, String publishedDate, String description,
-			List<String []> industryIdentifiers, long pageCount, String printType, List<String> categories,
-			List<String> imageLinks, String language, String previewLink, String infoLink, String canonicalVolumeLink) {
+	public Book(String title, String authors, String publisher, String publishedDate, String description,
+			String ISBN13, long pageCount, String printType, String categories,
+			String smallThumbnail, String language, String previewLink, String infoLink, String canonicalVolumeLink) {
 		this.title = title;
 		this.authors = authors;
 		this.publisher = publisher;
 		this.publishedDate = publishedDate;
 		this.description = description;
-		this.industryIdentifiers = industryIdentifiers;
+		this.ISBN13 = ISBN13;
 		this.pageCount = pageCount;
 		this.printType = printType;
 		this.categories = categories;
-		this.imageLinks = imageLinks;
+		this.smallThumbnail = smallThumbnail;
 		this.language = language;
 		this.previewLink = previewLink;
 		this.infoLink = infoLink;
@@ -80,11 +88,11 @@ public class Book {
 		this.title = title;
 	}
 
-	public List<String> getAuthors() {
+	public String getAuthors() {
 		return authors;
 	}
 
-	public void setAuthors(List<String> authors) {
+	public void setAuthors(String authors) {
 		this.authors = authors;
 	}
 
@@ -112,12 +120,12 @@ public class Book {
 		this.description = description;
 	}
 
-	public List<String []> getIndustryIdentifiers() {
-		return industryIdentifiers;
+	public String getISBN13() {
+		return ISBN13;
 	}
 
-	public void setIndustryIdentifiers(List<String []> industryIdentifiers) {
-		this.industryIdentifiers = industryIdentifiers;
+	public void setISBN13(String ISBN13) {
+		this.ISBN13 = ISBN13;
 	}
 
 	public long getPageCount() {
@@ -136,20 +144,20 @@ public class Book {
 		this.printType = printType;
 	}
 
-	public List<String> getCategories() {
+	public String getCategories() {
 		return categories;
 	}
 
-	public void setCategories(List<String> categories) {
+	public void setCategories(String categories) {
 		this.categories = categories;
 	}
 
-	public List<String> getImageLinks() {
-		return imageLinks;
+	public String getSmallThumbnail() {
+		return smallThumbnail;
 	}
 
-	public void setImageLinks(List<String> imageLinks) {
-		this.imageLinks = imageLinks;
+	public void setSmallThumbnail(String smallThumbnail) {
+		this.smallThumbnail = smallThumbnail;
 	}
 
 	public String getLanguage() {
