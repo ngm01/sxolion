@@ -15,10 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
+import com.projects.sxolion.models.Book;
 import com.projects.sxolion.models.GoogleBooksAPIResponse;
 import com.projects.sxolion.services.BookService;
 import com.projects.sxolion.services.GoogleBooksAPIResponseService;
-import com.projects.sxolion.models.Book;
+import com.projects.sxolion.models.VolumeInfo;
 
 @Controller
 public class BooksController {
@@ -69,8 +70,8 @@ public class BooksController {
 		else {
 			String[] selectedBooks = request.getParameterValues("selectedBooks");
 			GoogleBooksAPIResponseService gBARS = new GoogleBooksAPIResponseService();
-			List<Book> updatedBookList = gBARS.createBooks(searchResults, selectedBooks);
-			bookService.addBooks(updatedBookList);
+			List<VolumeInfo> volumeInfoList = gBARS.getVolumeInfoList(searchResults, selectedBooks);
+			bookService.addBooks(volumeInfoList);
 			return "redirect:/books";
 		}
 	}

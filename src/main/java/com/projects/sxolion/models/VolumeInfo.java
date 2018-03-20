@@ -1,61 +1,39 @@
 package com.projects.sxolion.models;
 
+import java.util.ArrayList;
 import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@Entity
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Book {
+public class VolumeInfo {
 	
-	@Id
-	@GeneratedValue
-	private Long id;
 	
-	@Column
 	private String title;
-	@Column
 	private List<String> authors;
-	@Column
 	private String publisher;
-	@Column
 	private String publishedDate;
-	@Column
 	private String description;
-	@Column
-	private List<String []> industryIdentifiers;
-	@Column
+	private List<IndustryIdentifier> industryIdentifiers;
 	private long pageCount;
-	@Column
 	private String printType;
-	@Column
 	private List<String> categories;
-	@Column
-	private List<String> imageLinks;
-	@Column
+	private ImageLinks imageLinks;
 	private String language;
-	@Column
 	private String previewLink;
-	@Column
 	private String infoLink;
-	@Column
 	private String canonicalVolumeLink;
 	
-	public Book() {
+	public VolumeInfo() {
 	}
 	
-	public Book(String title) {
+	public VolumeInfo(String title) {
 		this.title = title;
 	}
 	
-	public Book(String title, List<String> authors, String publisher, String publishedDate, String description,
-			List<String []> industryIdentifiers, long pageCount, String printType, List<String> categories,
-			List<String> imageLinks, String language, String previewLink, String infoLink, String canonicalVolumeLink) {
+	public VolumeInfo(String title, List<String> authors, String publisher, String publishedDate, String description,
+			List<IndustryIdentifier> industryIdentifiers, long pageCount, String printType, List<String> categories,
+			ImageLinks imageLinks, String language, String previewLink, String infoLink, String canonicalVolumeLink) {
 		this.title = title;
 		this.authors = authors;
 		this.publisher = publisher;
@@ -112,11 +90,11 @@ public class Book {
 		this.description = description;
 	}
 
-	public List<String []> getIndustryIdentifiers() {
+	public List<IndustryIdentifier> getIndustryIdentifiers() {
 		return industryIdentifiers;
 	}
 
-	public void setIndustryIdentifiers(List<String []> industryIdentifiers) {
+	public void setIndustryIdentifiers(List<IndustryIdentifier> industryIdentifiers) {
 		this.industryIdentifiers = industryIdentifiers;
 	}
 
@@ -144,11 +122,11 @@ public class Book {
 		this.categories = categories;
 	}
 
-	public List<String> getImageLinks() {
+	public ImageLinks getImageLinks() {
 		return imageLinks;
 	}
 
-	public void setImageLinks(List<String> imageLinks) {
+	public void setImageLinks(ImageLinks imageLinks) {
 		this.imageLinks = imageLinks;
 	}
 
@@ -182,6 +160,24 @@ public class Book {
 
 	public void setCanonicalVolumeLink(String canonicalVolumeLink) {
 		this.canonicalVolumeLink = canonicalVolumeLink;
+	}
+	
+	public List<String> convertImageLinks(){
+		List<String> convertedImageLinks = new ArrayList<String>();
+		convertedImageLinks.add(this.imageLinks.smallThumbnail);
+		convertedImageLinks.add(this.imageLinks.thumbnail);
+		return convertedImageLinks;
+	}
+	
+	public List<String []> convertIndustryIdentifiers(){
+		List<String []> convertedIndustryIDs = new ArrayList<String []>();
+		for(IndustryIdentifier industryIDer: this.industryIdentifiers) {
+			String[] IDer = new String [2];
+			IDer[0] = industryIDer.getType();
+			IDer[1] = industryIDer.getIdentifier();
+			convertedIndustryIDs.add(IDer);
+		}
+		return convertedIndustryIDs;
 	}
 
 }

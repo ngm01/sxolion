@@ -7,21 +7,21 @@ import org.springframework.stereotype.Service;
 
 import com.projects.sxolion.models.BookItem;
 import com.projects.sxolion.models.GoogleBooksAPIResponse;
-import com.projects.sxolion.models.Book;
+import com.projects.sxolion.models.VolumeInfo;
 
 @Service
 public class GoogleBooksAPIResponseService {
 	
-	private List<Book> bookList = new ArrayList<Book>();
+	private List<VolumeInfo> volumeInfoList = new ArrayList<VolumeInfo>();
 	BookService bookService = new BookService();
 	 
-	public List<Book> createBooks(GoogleBooksAPIResponse googleBooksAPIResponse, String[] selectedBooks) {
+	public List<VolumeInfo> getVolumeInfoList(GoogleBooksAPIResponse googleBooksAPIResponse, String[] selectedBooks) {
 		List<BookItem> items = googleBooksAPIResponse.getItems();
 		for(String i: selectedBooks) {
 			BookItem bookItem = items.get(Integer.parseInt(i));
-			Book book = bookItem.getVolumeInfo();
-			bookList.add(book);
+			VolumeInfo book = bookItem.getVolumeInfo();
+			volumeInfoList.add(book);
 		}
-		return bookList;
+		return volumeInfoList;
 	}
 }
