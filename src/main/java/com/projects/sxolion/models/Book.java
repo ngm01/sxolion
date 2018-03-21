@@ -7,6 +7,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -26,6 +29,7 @@ public class Book {
 	private String publisher;
 	@Column
 	private String publishedDate;
+	@Lob
 	@Column
 	private String description;
 	@Column
@@ -190,6 +194,16 @@ public class Book {
 
 	public void setCanonicalVolumeLink(String canonicalVolumeLink) {
 		this.canonicalVolumeLink = canonicalVolumeLink;
+	}
+	
+	@PrePersist
+	protected void onCreate() {
+		this.createdAt = new Date();
+	}
+	
+	@PreUpdate
+	protected void onUpdate() {
+		this.updatedAt = new Date();
 	}
 
 }

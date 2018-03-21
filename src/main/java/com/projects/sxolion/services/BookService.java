@@ -1,17 +1,22 @@
 package com.projects.sxolion.services;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
 import com.projects.sxolion.models.Book;
 import com.projects.sxolion.models.VolumeInfo;
+import com.projects.sxolion.repositories.BookRepository;
 
 @Service
 public class BookService {
 	
-	private List<Book> masterBookList = new ArrayList<Book>();
+	private BookRepository bookRepository;
+	public BookService(BookRepository bookRepository) {
+		this.bookRepository = bookRepository;
+	}
+	//private List<Book> masterBookList = new ArrayList<Book>();
 	
 	public void addBooks(List<VolumeInfo> volumeInfoList) {
 		for(VolumeInfo volumeInfo: volumeInfoList) {
@@ -30,12 +35,17 @@ public class BookService {
 			book.setPublishedDate(volumeInfo.getPublishedDate());
 			book.setPublisher(volumeInfo.getPublisher());
 			book.setTitle(volumeInfo.getTitle());
-			masterBookList.add(book);
+			//masterBookList.add(book);
+			bookRepository.save(book);
 		}
 	}
 	
 	public List<Book> allBooks(){
-		return this.masterBookList;
+		return bookRepository.findAll();
 	}
+	
+//	public void deleteBook(Long id) {
+//		bookRepository.delete(id);
+//	}
 
 }

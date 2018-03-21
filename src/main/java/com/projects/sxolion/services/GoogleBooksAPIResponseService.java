@@ -8,12 +8,14 @@ import org.springframework.stereotype.Service;
 import com.projects.sxolion.models.BookItem;
 import com.projects.sxolion.models.GoogleBooksAPIResponse;
 import com.projects.sxolion.models.VolumeInfo;
+import com.projects.sxolion.repositories.BookRepository;
 
 @Service
 public class GoogleBooksAPIResponseService {
 	
 	private List<VolumeInfo> volumeInfoList = new ArrayList<VolumeInfo>();
-	BookService bookService = new BookService();
+	private BookRepository bookRepo;
+	BookService bookService = new BookService(bookRepo);
 	 
 	public List<VolumeInfo> getVolumeInfoList(GoogleBooksAPIResponse googleBooksAPIResponse, String[] selectedBooks) {
 		List<BookItem> items = googleBooksAPIResponse.getItems();
