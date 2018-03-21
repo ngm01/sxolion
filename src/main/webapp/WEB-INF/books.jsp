@@ -41,7 +41,7 @@
 							</c:forEach>
 						</p>
 						<p><c:out value="${item.volumeInfo.publishedDate}"/></p>
-						<p><c:out value="${fn:substring(item.volumeInfo.description, 0, 100)}"/>...</p>
+						<p><c:out value="${item.volumeInfo.description}"/>...</p>
 						<p>
 							<a href="${item.volumeInfo.previewLink}" target="_blank">preview</a>
 						</p>

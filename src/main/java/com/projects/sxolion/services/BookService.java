@@ -24,7 +24,7 @@ public class BookService {
 			book.setAuthors(volumeInfo.getAuthorsAsString());
 			book.setCanonicalVolumeLink(volumeInfo.getCanonicalVolumeLink());
 			book.setCategories(volumeInfo.getCategoriesAsString());
-			book.setDescription(volumeInfo.getDescription());		
+			book.setDescription(volumeInfo.getTrimDescription(volumeInfo.getDescription()));		
 			book.setSmallThumbnail(volumeInfo.getSmallThumbnail());
 			book.setISBN13(volumeInfo.getISBN13());
 			book.setInfoLink(volumeInfo.getInfoLink());

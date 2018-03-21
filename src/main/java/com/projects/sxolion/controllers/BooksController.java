@@ -1,5 +1,6 @@
 package com.projects.sxolion.controllers;
 
+import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
 import com.projects.sxolion.models.Book;
+import com.projects.sxolion.models.BookItem;
 import com.projects.sxolion.models.GoogleBooksAPIResponse;
 import com.projects.sxolion.services.BookService;
 import com.projects.sxolion.services.GoogleBooksAPIResponseService;
@@ -58,6 +60,14 @@ public class BooksController {
 			RestTemplate restTemplate = new RestTemplate();
 			GoogleBooksAPIResponse searchResults = restTemplate.getForObject("https://www.googleapis.com/books/v1/volumes?q="+query, GoogleBooksAPIResponse.class);
 			this.searchResults = searchResults;
+			for(BookItem bookItem: searchResults.getItems()) {
+				String desc = bookItem.getVolumeInfo().getDescription();
+				if(desc==null) {
+					desc = "None";
+				}
+				desc = getTrimDescription(desc);
+				bookItem.getVolumeInfo().setDescription(desc);
+			}
 			return "redirect:/books";
 		}
 	}
@@ -74,6 +84,25 @@ public class BooksController {
 			bookService.addBooks(volumeInfoList);
 			return "redirect:/books";
 		}
+	}
+	
+	public String getTrimDescription(String desc) {
+		String trimDescription;
+		if(desc.length()<255) {
+			trimDescription = desc;
+		}
+		else {
+	        List<String> endChars = Arrays.asList(" ", ",", ".", "!", "?");
+	        int finalInt = 254;
+	        char finalChar = desc.charAt(finalInt);
+	        trimDescription = desc.substring(0, finalInt);
+	        while(endChars.indexOf(String.valueOf(finalChar))==-1) {
+	            finalInt--;
+	            finalChar = desc.charAt(finalInt);
+	            trimDescription = desc.substring(0, finalInt);
+			}
+		}
+		return trimDescription;
 	}
 	
 //	@RequestMapping("/books{index}")

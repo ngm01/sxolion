@@ -2,6 +2,7 @@ package com.projects.sxolion.models;
 
 import java.util.List;
 
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -181,6 +182,25 @@ public class VolumeInfo {
 	
 	public String getCategoriesAsString() {
 		return stringifyListHelper(this.categories);
+	}
+	
+	public String getTrimDescription(String desc) {
+		String trimDescription;
+		if(desc.length()<255) {
+			trimDescription = desc;
+		}
+		else {
+	        List<String> endChars = Arrays.asList(" ", ",", ".", "!", "?");
+	        int finalInt = 254;
+	        char finalChar = desc.charAt(finalInt);
+	        trimDescription = desc.substring(0, finalInt);
+	        while(endChars.indexOf(String.valueOf(finalChar))==-1) {
+	            finalInt--;
+	            finalChar = desc.charAt(finalInt);
+	            trimDescription = desc.substring(0, finalInt-1);
+			}
+		}
+		return trimDescription;
 	}
 	
 	public String stringifyListHelper(List<String> inputList) {
