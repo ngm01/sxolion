@@ -60,13 +60,15 @@ public class BooksController {
 			RestTemplate restTemplate = new RestTemplate();
 			GoogleBooksAPIResponse searchResults = restTemplate.getForObject("https://www.googleapis.com/books/v1/volumes?q="+query, GoogleBooksAPIResponse.class);
 			this.searchResults = searchResults;
-			for(BookItem bookItem: searchResults.getItems()) {
-				String desc = bookItem.getVolumeInfo().getDescription();
-				if(desc==null) {
-					desc = "None";
+			if(searchResults != null) {
+				for(BookItem bookItem: searchResults.getItems()) {
+					String desc = bookItem.getVolumeInfo().getDescription();
+					if(desc==null) {
+						desc = "None";
+					}
+					desc = getTrimDescription(desc);
+					bookItem.getVolumeInfo().setDescription(desc);
 				}
-				desc = getTrimDescription(desc);
-				bookItem.getVolumeInfo().setDescription(desc);
 			}
 			return "redirect:/books";
 		}

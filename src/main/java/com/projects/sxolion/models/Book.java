@@ -2,19 +2,26 @@ package com.projects.sxolion.models;
 
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.Lob;
+import javax.persistence.ManyToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
+import javax.persistence.Table;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
 
 @Entity
+@Table(name="books")
 public class Book {
 	
 	@Id
@@ -57,6 +64,14 @@ public class Book {
 	
 	@DateTimeFormat(pattern="MM/dd/yyy HH:mm:ss")
 	private Date updatedAt;
+	
+	@ManyToMany(fetch=FetchType.LAZY)
+	@JoinTable(
+		name="books_shelves",
+		joinColumns=@JoinColumn(name="book_id"),
+		inverseJoinColumns=@JoinColumn(name="shelf_id")
+	)
+	private List<Shelf> shelves;
 	
 	public Book() {
 	}
