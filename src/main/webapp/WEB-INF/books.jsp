@@ -28,6 +28,12 @@
 	</c:when>
 	<c:otherwise>
 		<form:form method="POST" action="/books/add">
+		<label for="shelfSelect">Select a shelf:</label>
+		<select name="shelfSelect">
+			<c:forEach items="${shelves}" var="shelf">
+				<option value="${shelf.id}">${shelf.name}</option>
+			</c:forEach>
+		</select>
 		<input type="submit" value="Add Books"/>
 		<c:forEach items="${searchResults.items }" var="item" varStatus="bookLoop">
 			<div class="search-results-book">

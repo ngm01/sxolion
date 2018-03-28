@@ -41,6 +41,10 @@ public class Shelf {
 		this.name = name;
 	}
 	
+	public Long getId() {
+		return id;
+	}
+	
 	public Date getCreatedAt() {
 		return createdAt;
 	}

@@ -19,17 +19,21 @@ import org.springframework.web.client.RestTemplate;
 import com.projects.sxolion.models.Book;
 import com.projects.sxolion.models.BookItem;
 import com.projects.sxolion.models.GoogleBooksAPIResponse;
+import com.projects.sxolion.models.Shelf;
 import com.projects.sxolion.services.BookService;
 import com.projects.sxolion.services.GoogleBooksAPIResponseService;
+import com.projects.sxolion.services.ShelfService;
 import com.projects.sxolion.models.VolumeInfo;
 
 @Controller
 public class BooksController {
 
 	private final BookService bookService;
+	private final ShelfService shelfService;
 	private GoogleBooksAPIResponse searchResults;
-	public BooksController(BookService bookService) {
+	public BooksController(BookService bookService, ShelfService shelfService) {
 		this.bookService = bookService;
+		this.shelfService = shelfService;
 	}
 	
 	@RequestMapping("/")
@@ -41,6 +45,7 @@ public class BooksController {
 	@RequestMapping("/books")
 	public String allBooks(Model model) {
 		List<Book> books = bookService.allBooks();
+		List<Shelf> shelves = shelfService.readAll();
 		if(this.searchResults==null) {
 			model.addAttribute("searchResults", null);
 		}
@@ -48,6 +53,7 @@ public class BooksController {
 			model.addAttribute("searchResults", this.searchResults);
 		}
 		model.addAttribute("books", books);
+		model.addAttribute("shelves", shelves);
 		return "books.jsp";
 	}
 	
