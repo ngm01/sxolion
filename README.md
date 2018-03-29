@@ -4,9 +4,9 @@ TODO:
 1) Basic CRUD for books and shelves (routes and controllers logic, services) (DONE)
 2) Replace current dummy adder form for books with Google Books API search (DONE)
 3) Refactor books model, integrate with [Google Books API](https://www.googleapis.com/books/v1/volumes/KXQrAQAAQBAJ) (DONE)
-4) Persist books, shelves in MySQL db (BOOKS done, SHELVES next)
-5) Book-Shelf join
+4) Persist books, shelves in MySQL db (BOOKS done, SHELVES done)
+5) Book-Shelf join (DONE)
 6) Clean up UI (Bootstrap, jQuery)
-7) Tagging
-8) Users/login-registration
-9) QR codes
+7) Users/login-registration
+8) QR codes
+9) Add tags, social features
