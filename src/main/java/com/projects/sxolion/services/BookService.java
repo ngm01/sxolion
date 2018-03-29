@@ -1,5 +1,6 @@
 package com.projects.sxolion.services;
 
+import java.util.ArrayList;
 //import java.util.ArrayList;
 import java.util.List;
 
@@ -16,9 +17,9 @@ public class BookService {
 	public BookService(BookRepository bookRepository) {
 		this.bookRepository = bookRepository;
 	}
-	//private List<Book> masterBookList = new ArrayList<Book>();
 	
-	public void addBooks(List<VolumeInfo> volumeInfoList) {
+	public List<Book> addBooks(List<VolumeInfo> volumeInfoList) {
+		List<Book> newBookList = new ArrayList<Book>();
 		for(VolumeInfo volumeInfo: volumeInfoList) {
 			Book book = new Book();
 			book.setAuthors(volumeInfo.getAuthorsAsString());
@@ -35,9 +36,10 @@ public class BookService {
 			book.setPublishedDate(volumeInfo.getPublishedDate());
 			book.setPublisher(volumeInfo.getPublisher());
 			book.setTitle(volumeInfo.getTitle());
-			//masterBookList.add(book);
+			newBookList.add(book);
 			bookRepository.save(book);
 		}
+		return newBookList;
 	}
 	
 	public List<Book> allBooks(){

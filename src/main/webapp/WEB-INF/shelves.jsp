@@ -13,7 +13,9 @@
 <table class="table">
 <c:forEach items="${shelves}" var="shelf" varStatus="loop">
     <tr>    
-    <td><c:out value="${shelf.name}"/></td>
+    <td>
+    		<a href="/shelves/${shelf.id}">${shelf.name}</a>
+    </td>
     <td><a href="/shelves/delete/${shelf.id}">Delete</a></td>
     </tr>
 </c:forEach>

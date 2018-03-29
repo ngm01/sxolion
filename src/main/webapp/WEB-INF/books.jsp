@@ -2,14 +2,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!-- ... -->
-<div>
-	<ul>
-	<c:forEach items="${books}" var="book">
-		<li>"${book.title}"</li>
-	</c:forEach>
-	</ul>
-</div>
-
 <form method="GET" action="/books/search">
 	<label for="query">Search for books:</label>
 	<input type="text" name="query"/>

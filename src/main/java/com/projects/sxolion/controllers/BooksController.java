@@ -2,8 +2,8 @@ package com.projects.sxolion.controllers;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
-import javax.servlet.http.HttpServletRequest;
 //import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -81,15 +81,25 @@ public class BooksController {
 	}
 	
 	@PostMapping("/books/add")
-	public String addBooks(HttpServletRequest request) {
-		if(request.getParameterValues("selectedBooks")==null) {
+	public String addBooks(@RequestParam(value="selectedBooks") String[] selectedBooks, @RequestParam(value="shelfSelect") Long shelfSelect) {
+		if(selectedBooks==null) {
 			return "redirect:/books";
 		}
 		else {
-			String[] selectedBooks = request.getParameterValues("selectedBooks");
 			GoogleBooksAPIResponseService gBARS = new GoogleBooksAPIResponseService();
 			List<VolumeInfo> volumeInfoList = gBARS.getVolumeInfoList(searchResults, selectedBooks);
-			bookService.addBooks(volumeInfoList);
+			List<Book> booksToAddToShelf = bookService.addBooks(volumeInfoList);
+			
+			Optional<Shelf> shelfOptional = shelfService.readOne(shelfSelect);
+			if(shelfOptional.isPresent()) {
+				Shelf shelfToUpdate = shelfOptional.get();
+				List<Book> shelfsBooks = shelfToUpdate.getBooks();
+				for(Book book: booksToAddToShelf) {
+					shelfsBooks.add(book);
+				}
+				shelfToUpdate.setBooks(shelfsBooks);
+				shelfService.updateShelf(shelfToUpdate);
+			}
 			return "redirect:/books";
 		}
 	}

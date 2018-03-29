@@ -35,10 +35,12 @@ public class ShelvesController {
 	
 	@RequestMapping("shelves/{id}")
 	public String findShelf(Model model, @PathVariable("id") Long id) {
-		Optional<Shelf> shelf = shelvesService.readOne(id);
-		if(shelf != null) {
+		Optional<Shelf> shelfOptional = shelvesService.readOne(id);
+		if(shelfOptional.isPresent()) {
+			Shelf shelf = shelfOptional.get();
 			model.addAttribute("shelf", shelf);
-			return "singlShelf.jsp";
+			model.addAttribute("books", shelf.getBooks());
+			return "singleShelf.jsp";
 		}
 		else {
 			return "shelves.jsp";
