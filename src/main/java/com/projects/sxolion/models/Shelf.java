@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -33,6 +34,10 @@ public class Shelf {
 		inverseJoinColumns=@JoinColumn(name="book_id")
 	)
 	private List<Book> books;
+	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="user_id")
+	private User user;
 	
 	public Shelf() {
 	}
