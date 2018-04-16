@@ -31,12 +31,22 @@
 </head>
 
 <body>
+	
 	<h1>Welcome to Sxolion. Please Log In.</h1>
+	
+	<c:if test="${logoutMessage != null}">
+		<c:out value="${logoutMessage}"></c:out>
+	</c:if>
+	
+	<c:if test="${errorMessage != null}">
+		<c:out value="${errorMessage}"></c:out>
+	</c:if>
+	
 	
 	<form method="POST" action="/login">
 		<p class="form-field">
-			<label for="email">Email:</label>
-			<input type="text" id="email" name="email"/>
+			<label for="username">Email:</label>
+			<input type="text" id="email" name="username"/>
 		</p>
 		
 		<p class="form-field">

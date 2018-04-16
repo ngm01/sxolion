@@ -1,5 +1,7 @@
 package com.projects.sxolion.controllers;
 
+import java.security.Principal;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -9,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.projects.sxolion.models.User;
 import com.projects.sxolion.services.UserService;
@@ -38,8 +41,24 @@ public class UsersController {
 	}
 	
 	@RequestMapping("/login")
-	public String login() {
+	public String login(
+			@RequestParam(value="error", required=false) String error, 
+			@RequestParam(value="logout", required=false) String logout, 
+			Model model) {
+		if(error != null) {
+			model.addAttribute("errorMessage", "Invalid credentials, please try again.");
+		}
+		if(logout != null) {
+			model.addAttribute("logoutMessage", "Logout successful, see you next time.");
+		}
 		return "login.jsp";
+	}
+	
+	@RequestMapping("/")
+	public String home(Principal principal, Model model) {
+		String email = principal.getName();
+		model.addAttribute("currentUser", userService.findByEmail(email));
+		return "index.jsp";
 	}
 
 }

@@ -36,11 +36,6 @@ public class BooksController {
 		this.shelfService = shelfService;
 	}
 	
-	@RequestMapping("/")
-	public String index() {
-		return "index.jsp";
-	}
-	
 	// @ModelAttribute("searchResults") GoogleBooksAPIResponse searchResults
 	@RequestMapping("/books")
 	public String allBooks(Model model) {
