@@ -2,7 +2,6 @@ package com.projects.sxolion.controllers;
 
 import java.security.Principal;
 
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -16,13 +15,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.projects.sxolion.models.User;
 import com.projects.sxolion.services.UserService;
 
+import validators.UserValidator;
+
 @Controller
 public class UsersController {
 	
 	private UserService userService;
+	private UserValidator userValidator;
 	
-	public UsersController(UserService userService) {
+	public UsersController(UserService userService, UserValidator userValidator) {
 		this.userService = userService;
+		this.userValidator = userValidator;
 	}
 	
 	@RequestMapping("/registration")
@@ -32,7 +35,8 @@ public class UsersController {
 	
 	@PostMapping("/registration")
 	public String registration(@Valid @ModelAttribute("user") User user, 
-			BindingResult result, Model model, HttpSession session) {
+			BindingResult result, Model model) {
+		userValidator.validate(user, result);
 		if(result.hasErrors()) {
 			return "registration.jsp";
 		}
@@ -59,6 +63,13 @@ public class UsersController {
 		String email = principal.getName();
 		model.addAttribute("currentUser", userService.findByEmail(email));
 		return "index.jsp";
+	}
+	
+	@RequestMapping("/admin")
+	public String adminPage(Principal principal, Model model) {
+		String username = principal.getName();
+		model.addAttribute("currentUser", userService.findByEmail(username));
+		return "adminPage.jsp";
 	}
 
 }

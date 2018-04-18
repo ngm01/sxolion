@@ -16,6 +16,7 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="users")
@@ -25,6 +26,7 @@ public class User {
 	@GeneratedValue
 	private Long id;
 	private String email;
+	@Size(min=5)
 	private String password;
 	@Transient
 	private String passwordConf;
