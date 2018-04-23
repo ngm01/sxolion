@@ -1,4 +1,4 @@
-package validators;
+package com.projects.sxolion.validators;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;

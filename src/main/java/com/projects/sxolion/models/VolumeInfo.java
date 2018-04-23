@@ -167,9 +167,10 @@ public class VolumeInfo {
 	}
 	
 	public String getISBN13(){
-		String ISBN13 = "978";
+		String ISBN13 = "";
 		for(IndustryIdentifier industryIDer: this.industryIdentifiers) {
-			if(industryIDer.getType() == "ISBN_13") {
+			String type = industryIDer.getType();
+			if(type.equals("ISBN_13")) {
 				ISBN13 = industryIDer.getIdentifier();
 			}
 		}

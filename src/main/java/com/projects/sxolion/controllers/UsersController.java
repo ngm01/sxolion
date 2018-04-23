@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.projects.sxolion.models.User;
 import com.projects.sxolion.services.UserService;
-
-import validators.UserValidator;
+import com.projects.sxolion.validators.UserValidator;
 
 @Controller
 public class UsersController {
