@@ -1,5 +1,6 @@
 package com.projects.sxolion.controllers;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,33 +15,48 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.projects.sxolion.models.Shelf;
+import com.projects.sxolion.models.User;
 import com.projects.sxolion.services.ShelfService;
+import com.projects.sxolion.services.UserService;
+
 
 @Controller
 public class ShelvesController {
 
 	private final ShelfService shelvesService;
+	private final UserService userService;
 	
-	public ShelvesController(ShelfService shelvesService) {
+	public ShelvesController(ShelfService shelvesService, UserService userService) {
 		this.shelvesService = shelvesService;
+		this.userService = userService;
 	}
 	
 	@RequestMapping("/shelves")
-	public String allShelves(Model model) {
-		List<Shelf> shelves = shelvesService.readAll();
+	public String allShelves(Model model, Principal principal) {
+		String email = principal.getName();
+		User currentUser = userService.findByEmail(email);
+		List<Shelf> shelves = currentUser.getShelves();
 		model.addAttribute("shelves", shelves);
 		model.addAttribute("shelf", new Shelf());
 		return "shelves.jsp";
 	}
 	
 	@RequestMapping("shelves/{id}")
-	public String findShelf(Model model, @PathVariable("id") Long id) {
+	public String findShelf(Model model, @PathVariable("id") Long id, Principal principal) {
 		Optional<Shelf> shelfOptional = shelvesService.readOne(id);
 		if(shelfOptional.isPresent()) {
+			String email = principal.getName();
+			User currentUser = userService.findByEmail(email);
+			List<Shelf> usersShelves = currentUser.getShelves();
 			Shelf shelf = shelfOptional.get();
-			model.addAttribute("shelf", shelf);
-			model.addAttribute("books", shelf.getBooks());
-			return "singleShelf.jsp";
+			if(usersShelves.contains(shelf)) {
+				model.addAttribute("shelf", shelf);
+				model.addAttribute("books", shelf.getBooks());
+				return "singleShelf.jsp";
+			}
+			else {
+				return "shelves.jsp";
+			}
 		}
 		else {
 			return "shelves.jsp";
@@ -53,12 +69,21 @@ public class ShelvesController {
 //	}
 	
 	@PostMapping("shelves/new")
-	public String createShelf(@Valid @ModelAttribute("shelf") Shelf shelf, BindingResult result) {
+	public String createShelf(@Valid @ModelAttribute("shelf") Shelf shelf, BindingResult result, Principal principal) {
 		if(result.hasErrors()) {
 			return "newShelf.jsp";
 		}
 		else {
-			shelvesService.createShelf(shelf);
+			String email = principal.getName();
+			User currentUser = userService.findByEmail(email);
+			Long newShelfId = shelvesService.createShelf(shelf);
+			Optional<Shelf> shelfOptional = shelvesService.readOne(newShelfId);
+			if(shelfOptional.isPresent()) {
+				Shelf newShelf = shelfOptional.get();
+				List<Shelf> usersShelves = currentUser.getShelves();
+				usersShelves.add(newShelf);
+				currentUser.setShelves(usersShelves);
+			}
 			return "redirect:/shelves";
 		}
 	}

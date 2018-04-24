@@ -42,8 +42,9 @@ public class Shelf {
 	public Shelf() {
 	}
 	
-	public Shelf(String name) {
+	public Shelf(String name, User user) {
 		this.name = name;
+		this.user = user;
 	}
 	
 	public Long getId() {
