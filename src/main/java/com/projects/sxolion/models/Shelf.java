@@ -74,6 +74,10 @@ public class Shelf {
 	public void setBooks(List<Book> books) {
 		this.books = books;
 	}
+	
+	public void setUser(User user) {
+		this.user = user;
+	}
 
 	public String getName() {
 		return name;

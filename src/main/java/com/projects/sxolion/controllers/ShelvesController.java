@@ -36,6 +36,13 @@ public class ShelvesController {
 		String email = principal.getName();
 		User currentUser = userService.findByEmail(email);
 		List<Shelf> shelves = currentUser.getShelves();
+		//Remove this later
+		if(shelves.isEmpty()) {
+			System.out.println("User has no shelves");
+		}
+		else {
+			System.out.println(shelves.get(0));
+		}
 		model.addAttribute("shelves", shelves);
 		model.addAttribute("shelf", new Shelf());
 		return "shelves.jsp";
@@ -80,9 +87,12 @@ public class ShelvesController {
 			Optional<Shelf> shelfOptional = shelvesService.readOne(newShelfId);
 			if(shelfOptional.isPresent()) {
 				Shelf newShelf = shelfOptional.get();
+				newShelf.setUser(currentUser);
 				List<Shelf> usersShelves = currentUser.getShelves();
 				usersShelves.add(newShelf);
 				currentUser.setShelves(usersShelves);
+				shelvesService.updateShelf(newShelf);
+				userService.updateUser(currentUser);
 			}
 			return "redirect:/shelves";
 		}
