@@ -1,5 +1,7 @@
 package com.projects.sxolion.services;
 
+import java.util.Optional;
+
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +36,10 @@ public class UserService {
 	
 	public User findByEmail(String email) {
 		return userRepository.findUserByEmail(email);
+	}
+	
+	public Optional<User> findById(Long id) {
+		return userRepository.findById(id);
 	}
 	
 	public Long updateUser(User user) {

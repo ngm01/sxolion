@@ -35,13 +35,13 @@ public class User {
 	private Date createdAt;
 	private Date updatedAt;
 	
-	@ManyToMany(fetch=FetchType.LAZY)
-	@JoinTable(
-		name="users_books",
-		joinColumns=@JoinColumn(name="user_id"),
-		inverseJoinColumns=@JoinColumn(name="book_id")
-		)
-	List<Book> books;
+//	@ManyToMany(fetch=FetchType.LAZY)
+//	@JoinTable(
+//		name="users_books",
+//		joinColumns=@JoinColumn(name="user_id"),
+//		inverseJoinColumns=@JoinColumn(name="book_id")
+//		)
+//	List<Book> books;
 	
 	@OneToMany(fetch=FetchType.LAZY, mappedBy="user")
 	List<Shelf> shelves;
@@ -120,13 +120,13 @@ public class User {
 		this.updatedAt = updatedAt;
 	}
 
-	public List<Book> getBooks() {
-		return books;
-	}
-
-	public void setBooks(List<Book> books) {
-		this.books = books;
-	}
+//	public List<Book> getBooks() {
+//		return books;
+//	}
+//
+//	public void setBooks(List<Book> books) {
+//		this.books = books;
+//	}
 
 	public List<Shelf> getShelves() {
 		return shelves;

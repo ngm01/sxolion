@@ -73,13 +73,13 @@ public class Book {
 	)
 	private List<Shelf> shelves;
 	
-	@ManyToMany(fetch=FetchType.LAZY)
-	@JoinTable(
-		name="users_books",
-		joinColumns=@JoinColumn(name="book_id"),
-		inverseJoinColumns=@JoinColumn(name="user_id")
-		)
-	private List<User> users;
+//	@ManyToMany(fetch=FetchType.LAZY)
+//	@JoinTable(
+//		name="users_books",
+//		joinColumns=@JoinColumn(name="book_id"),
+//		inverseJoinColumns=@JoinColumn(name="user_id")
+//		)
+//	private List<User> users;
 	
 	public Book() {
 	}

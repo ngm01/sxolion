@@ -1,5 +1,6 @@
 package com.projects.sxolion.controllers;
 
+import java.security.Principal;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -23,6 +24,7 @@ import com.projects.sxolion.models.Shelf;
 import com.projects.sxolion.services.BookService;
 import com.projects.sxolion.services.GoogleBooksAPIResponseService;
 import com.projects.sxolion.services.ShelfService;
+//import com.projects.sxolion.services.UserService;
 import com.projects.sxolion.models.VolumeInfo;
 
 @Controller
@@ -30,10 +32,12 @@ public class BooksController {
 
 	private final BookService bookService;
 	private final ShelfService shelfService;
+//	private final UserService userService;
 	private GoogleBooksAPIResponse searchResults;
 	public BooksController(BookService bookService, ShelfService shelfService) {
 		this.bookService = bookService;
 		this.shelfService = shelfService;
+//		this.userService = userService;
 	}
 	
 	// @ModelAttribute("searchResults") GoogleBooksAPIResponse searchResults
@@ -76,7 +80,7 @@ public class BooksController {
 	}
 	
 	@PostMapping("/books/add")
-	public String addBooks(@RequestParam(value="selectedBooks") String[] selectedBooks, @RequestParam(value="shelfSelect") Long shelfSelect) {
+	public String addBooks(@RequestParam(value="selectedBooks") String[] selectedBooks, @RequestParam(value="shelfSelect") Long shelfSelect, Principal principal) {
 		if(selectedBooks==null) {
 			return "redirect:/books";
 		}
@@ -98,6 +102,7 @@ public class BooksController {
 			return "redirect:/books";
 		}
 	}
+	
 	
 	public String getTrimDescription(String desc) {
 		String trimDescription;

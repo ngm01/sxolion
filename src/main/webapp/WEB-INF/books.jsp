@@ -2,6 +2,9 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!-- ... -->
+<head>
+	<title>S&#967;olion | Search for books</title>
+</head>
 <form method="GET" action="/books/search">
 	<label for="query">Search for books:</label>
 	<input type="text" name="query"/>

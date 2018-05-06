@@ -23,6 +23,8 @@ public class Shelf {
 	private Long id;
 	@Column
 	private String name;
+	@Column
+	private boolean isDefaultShelf;
 	@Column(updatable=false)
 	private Date createdAt;
 	@Column
@@ -85,6 +87,14 @@ public class Shelf {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public boolean isDefaultShelf() {
+		return isDefaultShelf;
+	}
+
+	public void setDefaultShelf(boolean isDefaultShelf) {
+		this.isDefaultShelf = isDefaultShelf;
 	}
 	
 	
