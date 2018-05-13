@@ -8,5 +8,5 @@ import com.projects.sxolion.models.User;
 
 @Repository
 public interface UserRepository extends CrudRepository<User, Long> {
-	User findUserByEmail(String email);
+	User findByEmail(String email);
 }

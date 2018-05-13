@@ -35,7 +35,9 @@ public class UserService {
 	}
 	
 	public User findByEmail(String email) {
-		return userRepository.findUserByEmail(email);
+		//This println works, which proves the problem is not here, or in the repo method
+		System.out.println("Testing in UserService: " + userRepository.findByEmail(email).getEmail());
+		return userRepository.findByEmail(email);
 	}
 	
 	public Optional<User> findById(Long id) {

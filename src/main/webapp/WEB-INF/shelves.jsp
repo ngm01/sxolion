@@ -16,7 +16,9 @@
     <td>
     		<a href="/shelves/${shelf.id}">${shelf.name}</a>
     </td>
+    <c:if test="${!shelf.defaultShelf }">
     <td><a href="/shelves/delete/${shelf.id}">Delete</a></td>
+    </c:if>
     </tr>
 </c:forEach>
 </table>

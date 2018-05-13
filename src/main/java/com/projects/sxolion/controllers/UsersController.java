@@ -46,11 +46,14 @@ public class UsersController {
 		if(result.hasErrors()) {
 			return "registration.jsp";
 		}
+		user.setUsername(user.getEmail());
 		userService.saveWithUserRole(user);
 		Shelf defaultShelf = new Shelf();
 		defaultShelf.setName("Uncategorized");
+		defaultShelf.setUser(user);
 		defaultShelf.setDefaultShelf(true);
-		List<Shelf> usersShelves = user.getShelves();
+		//The below should be a method somewhere
+		List<Shelf> usersShelves = new ArrayList<Shelf>();
 		usersShelves.add(defaultShelf);
 		user.setShelves(usersShelves);
 		shelfService.updateShelf(defaultShelf);
@@ -65,6 +68,7 @@ public class UsersController {
 			@RequestParam(value="logout", required=false) String logout, 
 			Model model) {
 		if(error != null) {
+			System.out.println("Error: " + error);
 			model.addAttribute("errorMessage", "Invalid credentials, please try again.");
 		}
 		if(logout != null) {
@@ -77,11 +81,8 @@ public class UsersController {
 	public String home(Principal principal, Model model) {
 		String email = principal.getName();
 		User currentUser = userService.findByEmail(email);
-		//add User's books to model
-		//So how to get them?
 		//Get the list of user's shelves;
 		List<Shelf> usersShelves = currentUser.getShelves();
-		
 		//then get the list of books in those shelves;
 		List<Book> usersBooks = new ArrayList<Book>();
 		if(usersShelves != null) {

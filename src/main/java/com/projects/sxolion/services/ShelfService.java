@@ -42,6 +42,12 @@ public class ShelfService {
 	
 	//delete
 	public void deleteShelf(Long id) {
-		shelfRepo.deleteById(id);
+		Optional<Shelf> findShelf = shelfRepo.findById(id);
+		if(findShelf.isPresent()) {
+			Shelf toDelete = findShelf.get();
+			if(!toDelete.isDefaultShelf()) {
+				shelfRepo.deleteById(id);
+			}
+		}
 	}
 }
