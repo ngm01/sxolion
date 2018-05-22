@@ -106,5 +106,4 @@ public class UsersController {
 		model.addAttribute("currentUser", userService.findByEmail(username));
 		return "adminPage.jsp";
 	}
-
 }
