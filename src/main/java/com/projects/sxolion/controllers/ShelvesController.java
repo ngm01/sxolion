@@ -93,6 +93,7 @@ public class ShelvesController {
 				currentUser.setShelves(usersShelves);
 				shelvesService.updateShelf(newShelf);
 				userService.updateUser(currentUser);
+				shelvesService.generateQRCode(newShelf);
 			}
 			return "redirect:/shelves";
 		}

@@ -1,11 +1,14 @@
 package com.projects.sxolion.services;
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.google.zxing.WriterException;
+import com.projects.sxolion.models.QRCodeGenerator;
 import com.projects.sxolion.models.Shelf;
 import com.projects.sxolion.repositories.ShelfRepository;
 
@@ -50,4 +53,19 @@ public class ShelfService {
 			}
 		}
 	}
+	
+	public void generateQRCode(Shelf shelf){
+		String url = "https://www.google.com/search?q=" + shelf.getName();
+		String imgPath = "./src/main/resources/static/qrcodes/" + shelf.getId().toString() + ".png";
+		QRCodeGenerator qrCodeGenerator = new QRCodeGenerator();
+		try {
+			qrCodeGenerator.generateQRCodeImage(url, 350, 350, imgPath);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch(WriterException e) {
+			e.printStackTrace();
+		}
+	}	
 }
