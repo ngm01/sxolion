@@ -6,7 +6,7 @@ TODO:
 3) Refactor books model, integrate with [Google Books API](https://www.googleapis.com/books/v1/volumes/KXQrAQAAQBAJ) (DONE)
 4) Persist books, shelves in MySQL db (BOOKS done, SHELVES done)
 5) Book-Shelf join (DONE)
-6) Clean up UI (Bootstrap, jQuery)
-7) Users/login-registration
-8) QR codes
-9) Add tags, social features
+6) QR code generation for shelves (In progress)
+7) Login-registration (In progress)
+8) Add tags, social features
+9) Transition from Spring MVC to a frontend framework (Angular?). Spring for backend only, serving data, not views.
