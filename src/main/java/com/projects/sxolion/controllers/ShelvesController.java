@@ -41,8 +41,11 @@ public class ShelvesController {
 			System.out.println("User has no shelves");
 		}
 		else {
-			System.out.println(shelves.get(0));
+			for(Shelf shelf: shelves) {
+				System.out.println(shelf.getName());
+			}
 		}
+		//remove the above later...
 		model.addAttribute("shelves", shelves);
 		model.addAttribute("shelf", new Shelf());
 		return "shelves.jsp";

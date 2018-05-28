@@ -1,6 +1,7 @@
 package com.projects.sxolion.services;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -25,6 +26,7 @@ public class ShelfService {
 	public List<Shelf> readAll(){
 		return shelfRepo.findAll();
 	}
+	
 	
 	//read one
 	public Optional<Shelf> readOne(Long id) {
@@ -56,7 +58,7 @@ public class ShelfService {
 	
 	public void generateQRCode(Shelf shelf){
 		String url = "https://www.google.com/search?q=" + shelf.getName();
-		String imgPath = "./src/main/resources/static/qrcodes/" + shelf.getId().toString() + ".png";
+		String imgPath = "./src/main/webapp/static/qrcodes/" + shelf.getId().toString() + ".png";
 		QRCodeGenerator qrCodeGenerator = new QRCodeGenerator();
 		try {
 			qrCodeGenerator.generateQRCodeImage(url, 350, 350, imgPath);

@@ -72,6 +72,10 @@ public class Shelf {
 	public List<Book> getBooks() {
 		return books;
 	}
+	
+	public User getUser() {
+		return user;
+	}
 
 	public void setBooks(List<Book> books) {
 		this.books = books;

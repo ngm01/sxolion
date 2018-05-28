@@ -21,10 +21,11 @@ import com.projects.sxolion.models.Book;
 import com.projects.sxolion.models.BookItem;
 import com.projects.sxolion.models.GoogleBooksAPIResponse;
 import com.projects.sxolion.models.Shelf;
+import com.projects.sxolion.models.User;
 import com.projects.sxolion.services.BookService;
 import com.projects.sxolion.services.GoogleBooksAPIResponseService;
 import com.projects.sxolion.services.ShelfService;
-//import com.projects.sxolion.services.UserService;
+import com.projects.sxolion.services.UserService;
 import com.projects.sxolion.models.VolumeInfo;
 
 @Controller
@@ -32,19 +33,21 @@ public class BooksController {
 
 	private final BookService bookService;
 	private final ShelfService shelfService;
-//	private final UserService userService;
+	private final UserService userService;
 	private GoogleBooksAPIResponse searchResults;
-	public BooksController(BookService bookService, ShelfService shelfService) {
+	public BooksController(BookService bookService, ShelfService shelfService, UserService userService) {
 		this.bookService = bookService;
 		this.shelfService = shelfService;
-//		this.userService = userService;
+		this.userService = userService;
 	}
 	
 	// @ModelAttribute("searchResults") GoogleBooksAPIResponse searchResults
 	@RequestMapping("/books")
-	public String allBooks(Model model) {
+	public String allBooks(Model model, Principal principal) {
+		String email = principal.getName();
+		User currentUser = userService.findByEmail(email);
 		List<Book> books = bookService.allBooks();
-		List<Shelf> shelves = shelfService.readAll();
+		List<Shelf> shelves = currentUser.getShelves();
 		if(this.searchResults==null) {
 			model.addAttribute("searchResults", null);
 		}
