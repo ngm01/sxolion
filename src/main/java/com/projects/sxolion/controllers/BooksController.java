@@ -53,6 +53,7 @@ public class BooksController {
 		}
 		else {
 			model.addAttribute("searchResults", this.searchResults);
+			this.searchResults = null;
 		}
 		model.addAttribute("books", books);
 		model.addAttribute("shelves", shelves);

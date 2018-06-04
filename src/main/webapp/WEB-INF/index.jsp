@@ -5,7 +5,7 @@
 <h1>Welcome to S&#967;olion!</h1>
 <p>S&#967;olion (pronounced <em>sko&#183;lee&#183;on</em>, from <a href="https://en.wikipedia.org/wiki/Scholia">the Greek</a>) is an application designed to help you keep track of books.</p>
 <p>You can add books to virtual shelves, and view others' books as well!</p>
-<p>Eventually you will be able to create QR codes linking your real-world book shelves and storage to these virtual containers.</p>
+<p>Each shelf has a printable QR code, allowing you to link your real-world book storage to these virtual shelves.</p>
 <p>Happy reading.</p>
 <a href="/shelves">View Your Shelves</a>
 <a href="/books">Search for Books</a>

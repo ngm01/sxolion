@@ -56,6 +56,7 @@ public class UsersController {
 		List<Shelf> usersShelves = new ArrayList<Shelf>();
 		usersShelves.add(defaultShelf);
 		user.setShelves(usersShelves);
+		shelfService.generateQRCode(defaultShelf);
 		shelfService.updateShelf(defaultShelf);
 		userService.updateUser(user);
 		
